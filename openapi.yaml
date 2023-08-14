@@ -1,0 +1,263 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Octopus API
+  description: API for Octopus - email marketing software.
+
+servers:
+  - url: https://api.octopus.com
+   
+paths:
+  /campaigns:
+    post:
+      summary: Create Campaign
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: 
+              $ref: '#/components/schemas/CampaignRequest'
+      responses:
+        201:
+          description: Campaign created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Campaign'
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /campaigns/{campaignId}:
+    get:
+      summary: Get Campaign
+      parameters:
+        - in: path
+          name: campaignId
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Campaign found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Campaign'
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      summary: Update Campaign
+      parameters:
+        - in: path
+          name: campaignId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: 
+              $ref: '#/components/schemas/CampaignRequest'
+      responses:
+        200:
+          description: Campaign updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Campaign'
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /campaigns/{campaignId}/send:
+    post:
+      summary: Send Campaign
+      parameters:
+        - in: path
+          name: campaignId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: 
+              $ref: '#/components/schemas/CampaignSendingRequest'
+      responses:
+        200:
+          description: Campaign sent successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignSending'
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /subscribe:
+    post:
+      summary: Subscribe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: 
+              $ref: '#/components/schemas/SubscriptionRequest'
+      responses:
+        201:
+          description: Subscribed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /unsubscribe:
+    post:
+      summary: Unsubscribe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: 
+              $ref: '#/components/schemas/SubscriptionRequest'
+      responses:
+        200:
+          description: Unsubscribed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      in: header
+      name: Authorization
+  schemas:        
+    Campaign:
+      type: object
+      properties:
+        id: 
+          type: string
+          description: Campaign ID
+          example: 123456
+        name:
+          type: string
+          description: Campaign name
+          example: Welcome Campaign
+        schedule:
+          type: string
+          description: Campaign schedule
+          example: 2021-01-01T00:00:00Z
+        status:
+          type: string
+          description: Campaign status
+          example: Active
+        subject:
+          type: string
+          description: Campaign subject
+          example: Welcome to Octopus
+        body:
+          type: string
+          description: Campaign body
+          example: Welcome to Octopus
+        from:
+          type: string
+          description: Campaign from address
+          example:
+        replyTo:
+          type: string
+          description: Campaign reply to address
+    CampaignRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Campaign name
+          example: Welcome Campaign
+        schedule:
+          type: string
+          description: Campaign schedule
+          example: 2021-01-01T00:00:00Z
+        subject:
+          type: string
+          description: Campaign subject
+          example: Welcome to Octopus
+        body:
+          type: string
+          description: Campaign body
+          example: Welcome to Octopus
+        from:
+          type: string
+          description: Campaign from address
+          example:
+        replyTo:
+          type: string
+          description: Campaign reply to address
+    CampaignSending:
+      type: object
+      properties:
+        campaignId:
+          type: string
+          description: Campaign ID
+          example: 123456
+        sendCount:
+          type: integer
+          description: Number of emails sent
+          example: 100
+    CampaignSendingRequest:
+      type: object
+      properties:
+        campaignId:
+          type: string
+          description: Campaign ID
+          example: 123456
+    SubscriptionRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          description: Email address
+    Subscription:
+      type: object
+      properties:
+        email:
+          type: string
+          description: Email address
+        campaignId:
+          type: string
+          description: Campaign ID
+          example: 123456
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: User not found
+security:
+  - api_key: []
