@@ -1,7 +1,5 @@
 # CampaignSending
 
-Campaign sent successfully
-
 
 ## Fields
 

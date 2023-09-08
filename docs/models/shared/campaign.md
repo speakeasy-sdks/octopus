@@ -1,7 +1,5 @@
 # Campaign
 
-Campaign created successfully
-
 
 ## Fields
 
