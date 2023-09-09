@@ -2,7 +2,6 @@
 
 package shared
 
-// Subscription - Subscribed successfully
 type Subscription struct {
 	// Campaign ID
 	CampaignID *string `json:"campaignId,omitempty"`

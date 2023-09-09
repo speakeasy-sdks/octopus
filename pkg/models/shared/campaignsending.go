@@ -2,7 +2,6 @@
 
 package shared
 
-// CampaignSending - Campaign sent successfully
 type CampaignSending struct {
 	// Campaign ID
 	CampaignID *string `json:"campaignId,omitempty"`

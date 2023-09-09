@@ -2,7 +2,6 @@
 
 package shared
 
-// ErrorResponse - Error
 type ErrorResponse struct {
 	// Error message
 	Error *string `json:"error,omitempty"`

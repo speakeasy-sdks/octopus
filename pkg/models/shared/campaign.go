@@ -2,7 +2,6 @@
 
 package shared
 
-// Campaign - Campaign created successfully
 type Campaign struct {
 	// Campaign body
 	Body *string `json:"body,omitempty"`

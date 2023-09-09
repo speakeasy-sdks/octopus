@@ -1,7 +1,5 @@
 # Subscription
 
-Subscribed successfully
-
 
 ## Fields
 
