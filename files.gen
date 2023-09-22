@@ -6,6 +6,7 @@ pkg/types/bigint.go
 pkg/types/date.go
 pkg/types/datetime.go
 pkg/types/decimal.go
+pkg/types/pointers.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -30,7 +31,6 @@ pkg/models/shared/campaignsendingrequest.go
 pkg/models/shared/subscription.go
 pkg/models/shared/subscriptionrequest.go
 pkg/models/shared/security.go
-docs/sdks/octopus/README.md
 USAGE.md
 docs/models/operations/getcampaignscampaignidrequest.md
 docs/models/operations/getcampaignscampaignidresponse.md
@@ -49,4 +49,5 @@ docs/models/shared/campaignsendingrequest.md
 docs/models/shared/subscription.md
 docs/models/shared/subscriptionrequest.md
 docs/models/shared/security.md
+docs/sdks/octopus/README.md
 .gitattributes

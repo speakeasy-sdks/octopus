@@ -10,8 +10,6 @@ go get github.com/speakeasy-sdks/octopus
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```go
 package main
 
@@ -32,7 +30,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
-        CampaignID: "corrupti",
+        CampaignID: "provident",
     })
     if err != nil {
         log.Fatal(err)
@@ -57,6 +55,38 @@ func main() {
 * [PostUnsubscribe](docs/sdks/octopus/README.md#postunsubscribe) - Unsubscribe
 * [PutCampaignsCampaignID](docs/sdks/octopus/README.md#putcampaignscampaignid) - Update Campaign
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `nil`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+
+
+<!-- Start Go Types -->
+
+<!-- End Go Types -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

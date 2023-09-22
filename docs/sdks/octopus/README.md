@@ -39,7 +39,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Octopus.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
-        CampaignID: "provident",
+        CampaignID: "distinctio",
     })
     if err != nil {
         log.Fatal(err)
@@ -90,9 +90,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Octopus.PostCampaigns(ctx, shared.CampaignRequest{
         Body: octopus.String("Welcome to Octopus"),
-        From: octopus.String("distinctio"),
+        From: octopus.String("quibusdam"),
         Name: octopus.String("Welcome Campaign"),
-        ReplyTo: octopus.String("quibusdam"),
+        ReplyTo: octopus.String("unde"),
         Schedule: octopus.String("2021-01-01T00:00:00Z"),
         Subject: octopus.String("Welcome to Octopus"),
     })
@@ -148,7 +148,7 @@ func main() {
         CampaignSendingRequest: shared.CampaignSendingRequest{
             CampaignID: octopus.String("123456"),
         },
-        CampaignID: "unde",
+        CampaignID: "nulla",
     })
     if err != nil {
         log.Fatal(err)
@@ -198,7 +198,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Octopus.PostSubscribe(ctx, shared.SubscriptionRequest{
-        Email: octopus.String("Karley_Stamm@hotmail.com"),
+        Email: octopus.String("Roselyn_Kassulke@yahoo.com"),
     })
     if err != nil {
         log.Fatal(err)
@@ -248,7 +248,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Octopus.PostUnsubscribe(ctx, shared.SubscriptionRequest{
-        Email: octopus.String("Gerda89@yahoo.com"),
+        Email: octopus.String("Hunter.Gulgowski96@yahoo.com"),
     })
     if err != nil {
         log.Fatal(err)
@@ -301,13 +301,13 @@ func main() {
     res, err := s.Octopus.PutCampaignsCampaignID(ctx, operations.PutCampaignsCampaignIDRequest{
         CampaignRequest: shared.CampaignRequest{
             Body: octopus.String("Welcome to Octopus"),
-            From: octopus.String("ipsa"),
+            From: octopus.String("tempora"),
             Name: octopus.String("Welcome Campaign"),
-            ReplyTo: octopus.String("delectus"),
+            ReplyTo: octopus.String("suscipit"),
             Schedule: octopus.String("2021-01-01T00:00:00Z"),
             Subject: octopus.String("Welcome to Octopus"),
         },
-        CampaignID: "tempora",
+        CampaignID: "molestiae",
     })
     if err != nil {
         log.Fatal(err)
