@@ -28,12 +28,15 @@ func (o *PutCampaignsCampaignIDRequest) GetCampaignID() string {
 
 type PutCampaignsCampaignIDResponse struct {
 	// Campaign updated successfully
-	Campaign    *shared.Campaign
+	Campaign *shared.Campaign
+	// HTTP response content type for this operation
 	ContentType string
 	// Error
 	ErrorResponse *shared.ErrorResponse
-	StatusCode    int
-	RawResponse   *http.Response
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
+	RawResponse *http.Response
 }
 
 func (o *PutCampaignsCampaignIDResponse) GetCampaign() *shared.Campaign {
