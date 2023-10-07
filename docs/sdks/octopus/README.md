@@ -93,7 +93,6 @@ func main() {
         Body: octopus.String("Welcome to Octopus"),
         From: octopus.String("deposit"),
         Name: octopus.String("Welcome Campaign"),
-        ReplyTo: octopus.String("Frozen Factors"),
         Schedule: octopus.String("2021-01-01T00:00:00Z"),
         Subject: octopus.String("Welcome to Octopus"),
     })
@@ -198,9 +197,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Octopus.PostSubscribe(ctx, shared.SubscriptionRequest{
-        Email: octopus.String("Jazlyn50@hotmail.com"),
-    })
+    res, err := s.Octopus.PostSubscribe(ctx, shared.SubscriptionRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -248,9 +245,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Octopus.PostUnsubscribe(ctx, shared.SubscriptionRequest{
-        Email: octopus.String("Cristopher.Gerlach38@gmail.com"),
-    })
+    res, err := s.Octopus.PostUnsubscribe(ctx, shared.SubscriptionRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -304,11 +299,10 @@ func main() {
             Body: octopus.String("Welcome to Octopus"),
             From: octopus.String("Lutetium"),
             Name: octopus.String("Welcome Campaign"),
-            ReplyTo: octopus.String("warmly Hybrid"),
             Schedule: octopus.String("2021-01-01T00:00:00Z"),
             Subject: octopus.String("Welcome to Octopus"),
         },
-        CampaignID: "dob Loan",
+        CampaignID: "warmly Hybrid",
     })
     if err != nil {
         log.Fatal(err)
