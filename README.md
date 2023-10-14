@@ -13,33 +13,32 @@ go get github.com/speakeasy-sdks/octopus
 ```go
 package main
 
-import(
+import (
 	"context"
-	"log"
 	"github.com/speakeasy-sdks/octopus"
-	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
 	"github.com/speakeasy-sdks/octopus/pkg/models/operations"
+	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"log"
 )
 
 func main() {
-    s := octopus.New(
-        octopus.WithSecurity(shared.Security{
-            APIKey: "",
-        }),
-    )
+	s := octopus.New(
+		octopus.WithSecurity(""),
+	)
 
-    ctx := context.Background()
-    res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
-        CampaignID: "Southeast firewall gray",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
+	ctx := context.Background()
+	res, err := s.Octopus.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
+		CampaignID: "Southeast firewall gray",
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    if res.Campaign != nil {
-        // handle response
-    }
+	if res.Campaign != nil {
+		// handle response
+	}
 }
+
 ```
 <!-- End SDK Example Usage -->
 

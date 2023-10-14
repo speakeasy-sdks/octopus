@@ -33,9 +33,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(shared.Security{
-            APIKey: "",
-        }),
+        octopus.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -83,9 +81,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(shared.Security{
-            APIKey: "",
-        }),
+        octopus.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -138,9 +134,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(shared.Security{
-            APIKey: "",
-        }),
+        octopus.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -191,9 +185,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(shared.Security{
-            APIKey: "",
-        }),
+        octopus.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -239,9 +231,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(shared.Security{
-            APIKey: "",
-        }),
+        octopus.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -288,9 +278,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(shared.Security{
-            APIKey: "",
-        }),
+        octopus.WithSecurity(""),
     )
 
     ctx := context.Background()
