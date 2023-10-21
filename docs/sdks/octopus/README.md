@@ -38,7 +38,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Octopus.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
-        CampaignID: "Southeast firewall gray",
+        CampaignID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -87,7 +87,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Octopus.PostCampaigns(ctx, shared.CampaignRequest{
         Body: octopus.String("Welcome to Octopus"),
-        From: octopus.String("deposit"),
+        From: octopus.String("string"),
         Name: octopus.String("Welcome Campaign"),
         Schedule: octopus.String("2021-01-01T00:00:00Z"),
         Subject: octopus.String("Welcome to Octopus"),
@@ -142,7 +142,7 @@ func main() {
         CampaignSendingRequest: shared.CampaignSendingRequest{
             CampaignID: octopus.String("123456"),
         },
-        CampaignID: "within Oxnard",
+        CampaignID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -285,12 +285,12 @@ func main() {
     res, err := s.Octopus.PutCampaignsCampaignID(ctx, operations.PutCampaignsCampaignIDRequest{
         CampaignRequest: shared.CampaignRequest{
             Body: octopus.String("Welcome to Octopus"),
-            From: octopus.String("Lutetium"),
+            From: octopus.String("string"),
             Name: octopus.String("Welcome Campaign"),
             Schedule: octopus.String("2021-01-01T00:00:00Z"),
             Subject: octopus.String("Welcome to Octopus"),
         },
-        CampaignID: "warmly Hybrid",
+        CampaignID: "string",
     })
     if err != nil {
         log.Fatal(err)

@@ -28,7 +28,7 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Octopus.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
-		CampaignID: "Southeast firewall gray",
+		CampaignID: "string",
 	})
 	if err != nil {
 		log.Fatal(err)

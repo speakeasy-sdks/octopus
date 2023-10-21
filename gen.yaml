@@ -2,23 +2,27 @@ configVersion: 1.0.0
 management:
   docChecksum: d728f001eccb35395e6bb098a1c9f47a
   docVersion: 1.0.0
-  speakeasyVersion: 1.99.2
-  generationVersion: 2.155.1
+  speakeasyVersion: 1.104.0
+  generationVersion: 2.169.0
 generation:
   comments:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/octopus.git
   sdkClassName: octopus
   singleTagPerOp: false
   tagNamespacingDisabled: false
 features:
   go:
-    core: 2.91.5
+    core: 2.94.0
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.0
 go:
-  version: 0.5.1
+  version: 0.6.0
   flattenGlobalSecurity: true
+  installationURL: https://github.com/speakeasy-sdks/octopus
   maxMethodParams: 0
   packageName: github.com/speakeasy-sdks/octopus
+  published: true
+  repoSubDirectory: .
