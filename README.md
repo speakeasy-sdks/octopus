@@ -27,7 +27,7 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Octopus.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
+	res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
 		CampaignID: "string",
 	})
 	if err != nil {
@@ -78,6 +78,180 @@ Here's an example of one such pagination call:
 <!-- Start Go Types -->
 
 <!-- End Go Types -->
+
+
+
+<!-- Start Error Handling -->
+# Error Handling
+
+Handling errors in your SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+
+
+<!-- End Error Handling -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally using the `WithServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://api.octopus.com` | None |
+
+For example:
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/octopus"
+	"github.com/speakeasy-sdks/octopus/pkg/models/operations"
+	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := octopus.New(
+		octopus.WithServerIndex(0),
+		octopus.WithSecurity(""),
+	)
+
+	ctx := context.Background()
+	res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
+		CampaignID: "string",
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.Campaign != nil {
+		// handle response
+	}
+}
+
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally using the `WithServerURL` option when initializing the SDK client instance. For example:
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/octopus"
+	"github.com/speakeasy-sdks/octopus/pkg/models/operations"
+	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := octopus.New(
+		octopus.WithServerURL("https://api.octopus.com"),
+		octopus.WithSecurity(""),
+	)
+
+	ctx := context.Background()
+	res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
+		CampaignID: "string",
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.Campaign != nil {
+		// handle response
+	}
+}
+
+```
+<!-- End Server Selection -->
+
+
+
+<!-- Start Custom HTTP Client -->
+# Custom HTTP Client
+
+The Go SDK makes API calls that wrap an internal HTTP client. The requirements for the HTTP client are very simple. It must match this interface:
+
+```go
+type HTTPClient interface {
+	Do(req *http.Request) (*http.Response, error)
+}
+```
+
+The built-in `net/http` client satisfies this interface and a default client based on the built-in is provided by default. To replace this default with a client of your own, you can implement this interface yourself or provide your own client configured as desired. Here's a simple example, which adds a client with a 30 second timeout.
+
+```go
+import (
+	"net/http"
+	"time"
+	"github.com/myorg/your-go-sdk"
+)
+
+var (
+	httpClient = &http.Client{Timeout: 30 * time.Second}
+	sdkClient  = sdk.New(sdk.WithClient(httpClient))
+)
+```
+
+This can be a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration.
+<!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Authentication -->
+
+# Authentication
+
+## Per-Client Security Schemes
+
+Your SDK supports the following security scheme globally:
+
+| Name     | Type     | Scheme   |
+| -------- | -------- | -------- |
+| `APIKey` | apiKey   | API key  |
+
+You can configure it using the `WithSecurity` option when initializing the SDK client instance. For example:
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/octopus"
+	"github.com/speakeasy-sdks/octopus/pkg/models/operations"
+	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := octopus.New(
+		octopus.WithSecurity(""),
+	)
+
+	ctx := context.Background()
+	res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
+		CampaignID: "string",
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.Campaign != nil {
+		// handle response
+	}
+}
+
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

@@ -37,7 +37,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Octopus.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
+    res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
         CampaignID: "string",
     })
     if err != nil {
@@ -85,7 +85,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Octopus.PostCampaigns(ctx, shared.CampaignRequest{
+    res, err := s.PostCampaigns(ctx, shared.CampaignRequest{
         Body: octopus.String("Welcome to Octopus"),
         From: octopus.String("string"),
         Name: octopus.String("Welcome Campaign"),
@@ -138,7 +138,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Octopus.PostCampaignsCampaignIDSend(ctx, operations.PostCampaignsCampaignIDSendRequest{
+    res, err := s.PostCampaignsCampaignIDSend(ctx, operations.PostCampaignsCampaignIDSendRequest{
         CampaignSendingRequest: shared.CampaignSendingRequest{
             CampaignID: octopus.String("123456"),
         },
@@ -189,7 +189,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Octopus.PostSubscribe(ctx, shared.SubscriptionRequest{})
+    res, err := s.PostSubscribe(ctx, shared.SubscriptionRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -235,7 +235,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Octopus.PostUnsubscribe(ctx, shared.SubscriptionRequest{})
+    res, err := s.PostUnsubscribe(ctx, shared.SubscriptionRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -282,7 +282,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Octopus.PutCampaignsCampaignID(ctx, operations.PutCampaignsCampaignIDRequest{
+    res, err := s.PutCampaignsCampaignID(ctx, operations.PutCampaignsCampaignIDRequest{
         CampaignRequest: shared.CampaignRequest{
             Body: octopus.String("Welcome to Octopus"),
             From: octopus.String("string"),
