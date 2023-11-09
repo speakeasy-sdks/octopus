@@ -136,9 +136,9 @@ func New(opts ...SDKOption) *Octopus {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.7.0",
-			GenVersion:        "2.181.1",
-			UserAgent:         "speakeasy-sdk/go 0.7.0 2.181.1 1.0.0 github.com/speakeasy-sdks/octopus",
+			SDKVersion:        "0.7.1",
+			GenVersion:        "2.185.0",
+			UserAgent:         "speakeasy-sdk/go 0.7.1 2.185.0 1.0.0 github.com/speakeasy-sdks/octopus",
 		},
 	}
 	for _, opt := range opts {
