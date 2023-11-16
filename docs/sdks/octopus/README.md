@@ -24,11 +24,11 @@ Get Campaign
 package main
 
 import(
-	"context"
-	"log"
-	"github.com/speakeasy-sdks/octopus"
 	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"github.com/speakeasy-sdks/octopus"
+	"context"
 	"github.com/speakeasy-sdks/octopus/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -75,10 +75,10 @@ Create Campaign
 package main
 
 import(
+	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"github.com/speakeasy-sdks/octopus"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/octopus"
-	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
 )
 
 func main() {
@@ -129,11 +129,11 @@ Send Campaign
 package main
 
 import(
-	"context"
-	"log"
-	"github.com/speakeasy-sdks/octopus"
 	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"github.com/speakeasy-sdks/octopus"
+	"context"
 	"github.com/speakeasy-sdks/octopus/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -183,10 +183,10 @@ Subscribe
 package main
 
 import(
+	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"github.com/speakeasy-sdks/octopus"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/octopus"
-	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
 )
 
 func main() {
@@ -231,10 +231,10 @@ Unsubscribe
 package main
 
 import(
+	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"github.com/speakeasy-sdks/octopus"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/octopus"
-	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
 )
 
 func main() {
@@ -279,11 +279,11 @@ Update Campaign
 package main
 
 import(
-	"context"
-	"log"
-	"github.com/speakeasy-sdks/octopus"
 	"github.com/speakeasy-sdks/octopus/pkg/models/shared"
+	"github.com/speakeasy-sdks/octopus"
+	"context"
 	"github.com/speakeasy-sdks/octopus/pkg/models/operations"
+	"log"
 )
 
 func main() {
