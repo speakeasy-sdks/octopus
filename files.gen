@@ -32,7 +32,6 @@ pkg/utils/utils.go
 /pkg/models/shared/subscription.go
 /pkg/models/shared/subscriptionrequest.go
 /pkg/models/shared/security.go
-USAGE.md
 docs/pkg/models/operations/getcampaignscampaignidrequest.md
 docs/pkg/models/operations/getcampaignscampaignidresponse.md
 docs/pkg/models/operations/postcampaignsresponse.md
@@ -51,4 +50,5 @@ docs/pkg/models/shared/subscription.md
 docs/pkg/models/shared/subscriptionrequest.md
 docs/pkg/models/shared/security.md
 docs/sdks/octopus/README.md
+USAGE.md
 .gitattributes
