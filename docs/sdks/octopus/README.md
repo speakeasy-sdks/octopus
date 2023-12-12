@@ -33,7 +33,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(""),
+        octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -83,7 +83,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(""),
+        octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -138,7 +138,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(""),
+        octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -191,7 +191,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(""),
+        octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -239,7 +239,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(""),
+        octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -288,7 +288,7 @@ import(
 
 func main() {
     s := octopus.New(
-        octopus.WithSecurity(""),
+        octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()

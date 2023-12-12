@@ -116,7 +116,6 @@ func withSecurity(security interface{}) func(context.Context) (interface{}, erro
 }
 
 // WithSecurity configures the SDK to use the provided security details
-
 func WithSecurity(apiKey string) SDKOption {
 	return func(sdk *Octopus) {
 		security := shared.Security{APIKey: apiKey}
@@ -136,9 +135,9 @@ func New(opts ...SDKOption) *Octopus {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.7.3",
-			GenVersion:        "2.202.2",
-			UserAgent:         "speakeasy-sdk/go 0.7.3 2.202.2 1.0.0 github.com/speakeasy-sdks/octopus",
+			SDKVersion:        "0.8.0",
+			GenVersion:        "2.213.3",
+			UserAgent:         "speakeasy-sdk/go 0.8.0 2.213.3 1.0.0 github.com/speakeasy-sdks/octopus",
 		},
 	}
 	for _, opt := range opts {

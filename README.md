@@ -26,7 +26,7 @@ import (
 
 func main() {
 	s := octopus.New(
-		octopus.WithSecurity(""),
+		octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -66,6 +66,8 @@ func main() {
 
 <!-- Start Special Types [types] -->
 ## Special Types
+
+
 <!-- End Special Types [types] -->
 
 
@@ -96,7 +98,7 @@ import (
 
 func main() {
 	s := octopus.New(
-		octopus.WithSecurity(""),
+		octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -145,7 +147,7 @@ import (
 func main() {
 	s := octopus.New(
 		octopus.WithServerIndex(0),
-		octopus.WithSecurity(""),
+		octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -181,7 +183,7 @@ import (
 func main() {
 	s := octopus.New(
 		octopus.WithServerURL("https://api.octopus.com"),
-		octopus.WithSecurity(""),
+		octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -257,7 +259,7 @@ import (
 
 func main() {
 	s := octopus.New(
-		octopus.WithSecurity(""),
+		octopus.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
