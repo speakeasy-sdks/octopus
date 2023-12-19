@@ -63,7 +63,7 @@ func main() {
 **[*operations.GetCampaignsCampaignIDResponse](../../pkg/models/operations/getcampaignscampaignidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PostCampaigns
 
@@ -117,7 +117,7 @@ func main() {
 **[*operations.PostCampaignsResponse](../../pkg/models/operations/postcampaignsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PostCampaignsCampaignIDSend
 
@@ -171,7 +171,7 @@ func main() {
 **[*operations.PostCampaignsCampaignIDSendResponse](../../pkg/models/operations/postcampaignscampaignidsendresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PostSubscribe
 
@@ -219,7 +219,7 @@ func main() {
 **[*operations.PostSubscribeResponse](../../pkg/models/operations/postsubscriberesponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PostUnsubscribe
 
@@ -267,7 +267,7 @@ func main() {
 **[*operations.PostUnsubscribeResponse](../../pkg/models/operations/postunsubscriberesponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PutCampaignsCampaignID
 
@@ -325,4 +325,4 @@ func main() {
 **[*operations.PutCampaignsCampaignIDResponse](../../pkg/models/operations/putcampaignscampaignidresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
