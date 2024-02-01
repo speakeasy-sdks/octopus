@@ -123,6 +123,15 @@ func WithSecurity(apiKey string) SDKOption {
 	}
 }
 
+// WithSecuritySource configures the SDK to invoke the Security Source function on each method call to determine authentication
+func WithSecuritySource(security func(context.Context) (shared.Security, error)) SDKOption {
+	return func(sdk *Octopus) {
+		sdk.sdkConfiguration.Security = func(ctx context.Context) (interface{}, error) {
+			return security(ctx)
+		}
+	}
+}
+
 func WithRetryConfig(retryConfig utils.RetryConfig) SDKOption {
 	return func(sdk *Octopus) {
 		sdk.sdkConfiguration.RetryConfig = &retryConfig
@@ -135,9 +144,9 @@ func New(opts ...SDKOption) *Octopus {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.8.3",
-			GenVersion:        "2.237.2",
-			UserAgent:         "speakeasy-sdk/go 0.8.3 2.237.2 1.0.0 github.com/speakeasy-sdks/octopus",
+			SDKVersion:        "0.8.4",
+			GenVersion:        "2.245.1",
+			UserAgent:         "speakeasy-sdk/go 0.8.4 2.245.1 1.0.0 github.com/speakeasy-sdks/octopus",
 		},
 	}
 	for _, opt := range opts {
