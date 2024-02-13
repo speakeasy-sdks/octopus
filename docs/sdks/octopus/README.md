@@ -89,7 +89,7 @@ func main() {
     ctx := context.Background()
     res, err := s.PostCampaigns(ctx, shared.CampaignRequest{
         Body: octopus.String("Welcome to Octopus"),
-        From: octopus.String("string"),
+        From: nil,
         Name: octopus.String("Welcome Campaign"),
         Schedule: octopus.String("2021-01-01T00:00:00Z"),
         Subject: octopus.String("Welcome to Octopus"),
@@ -295,7 +295,7 @@ func main() {
     res, err := s.PutCampaignsCampaignID(ctx, operations.PutCampaignsCampaignIDRequest{
         CampaignRequest: shared.CampaignRequest{
             Body: octopus.String("Welcome to Octopus"),
-            From: octopus.String("string"),
+            From: nil,
             Name: octopus.String("Welcome Campaign"),
             Schedule: octopus.String("2021-01-01T00:00:00Z"),
             Subject: octopus.String("Welcome to Octopus"),
