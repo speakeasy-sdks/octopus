@@ -17,7 +17,7 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
-		CampaignID: "string",
+		CampaignID: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)

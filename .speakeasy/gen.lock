@@ -4,16 +4,16 @@ management:
   docChecksum: d728f001eccb35395e6bb098a1c9f47a
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.253.0
-  releaseVersion: 0.9.1
-  configChecksum: 47a7243d6188a108b8363fd7f550e89a
+  generationVersion: 2.258.2
+  releaseVersion: 0.10.0
+  configChecksum: 59448edd31e7fcabe67fb1c69556e1b2
   repoURL: https://github.com/speakeasy-sdks/octopus.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/octopus
   published: true
 features:
   go:
-    core: 3.3.2
+    core: 3.4.0
     globalSecurity: 2.82.6
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -70,3 +70,4 @@ generatedFiles:
   - docs/sdks/octopus/README.md
   - USAGE.md
   - .gitattributes
+  - internal/hooks/hooks.go

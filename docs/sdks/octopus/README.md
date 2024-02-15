@@ -38,7 +38,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.GetCampaignsCampaignID(ctx, operations.GetCampaignsCampaignIDRequest{
-        CampaignID: "string",
+        CampaignID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -146,7 +146,7 @@ func main() {
         CampaignSendingRequest: shared.CampaignSendingRequest{
             CampaignID: octopus.String("123456"),
         },
-        CampaignID: "string",
+        CampaignID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -300,7 +300,7 @@ func main() {
             Schedule: octopus.String("2021-01-01T00:00:00Z"),
             Subject: octopus.String("Welcome to Octopus"),
         },
-        CampaignID: "string",
+        CampaignID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
