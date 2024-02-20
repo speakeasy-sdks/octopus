@@ -146,9 +146,9 @@ func New(opts ...SDKOption) *Octopus {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.10.0",
-			GenVersion:        "2.258.2",
-			UserAgent:         "speakeasy-sdk/go 0.10.0 2.258.2 1.0.0 github.com/speakeasy-sdks/octopus",
+			SDKVersion:        "0.10.1",
+			GenVersion:        "2.263.3",
+			UserAgent:         "speakeasy-sdk/go 0.10.1 2.263.3 1.0.0 github.com/speakeasy-sdks/octopus",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -190,12 +190,12 @@ func (s *Octopus) GetCampaignsCampaignID(ctx context.Context, request operations
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.SecurityClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -218,7 +218,6 @@ func (s *Octopus) GetCampaignsCampaignID(ctx context.Context, request operations
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetCampaignsCampaignIDResponse{
@@ -291,12 +290,12 @@ func (s *Octopus) PostCampaigns(ctx context.Context, request shared.CampaignRequ
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.SecurityClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -319,7 +318,6 @@ func (s *Octopus) PostCampaigns(ctx context.Context, request shared.CampaignRequ
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostCampaignsResponse{
@@ -392,12 +390,12 @@ func (s *Octopus) PostCampaignsCampaignIDSend(ctx context.Context, request opera
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.SecurityClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -420,7 +418,6 @@ func (s *Octopus) PostCampaignsCampaignIDSend(ctx context.Context, request opera
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostCampaignsCampaignIDSendResponse{
@@ -493,12 +490,12 @@ func (s *Octopus) PostSubscribe(ctx context.Context, request shared.Subscription
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.SecurityClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -521,7 +518,6 @@ func (s *Octopus) PostSubscribe(ctx context.Context, request shared.Subscription
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSubscribeResponse{
@@ -594,12 +590,12 @@ func (s *Octopus) PostUnsubscribe(ctx context.Context, request shared.Subscripti
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.SecurityClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -622,7 +618,6 @@ func (s *Octopus) PostUnsubscribe(ctx context.Context, request shared.Subscripti
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostUnsubscribeResponse{
@@ -695,12 +690,12 @@ func (s *Octopus) PutCampaignsCampaignID(ctx context.Context, request operations
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.SecurityClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -723,7 +718,6 @@ func (s *Octopus) PutCampaignsCampaignID(ctx context.Context, request operations
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PutCampaignsCampaignIDResponse{
