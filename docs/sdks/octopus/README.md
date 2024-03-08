@@ -43,7 +43,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Campaign != nil {
         // handle response
     }
@@ -97,7 +96,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Campaign != nil {
         // handle response
     }
@@ -151,7 +149,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CampaignSending != nil {
         // handle response
     }
@@ -199,7 +196,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Subscription != nil {
         // handle response
     }
@@ -247,7 +243,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Subscription != nil {
         // handle response
     }
@@ -305,7 +300,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Campaign != nil {
         // handle response
     }
